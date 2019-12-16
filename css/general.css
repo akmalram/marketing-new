@@ -339,4 +339,10 @@ button {
     padding: 13px 15px;
   }
 }
+
+@media screen and (max-width: 576px) {
+  .btn-primary {
+    padding: 9px 11px;
+  }
+}
 /*# sourceMappingURL=general.css.map */

@@ -229,7 +229,7 @@ button {
         padding: 13px 15px;
     }
 
-    @include xs-block [
+    @include xs-block {
         padding: 9px 11px;
-    ]
+    }
 }
