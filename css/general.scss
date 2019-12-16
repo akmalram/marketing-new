@@ -1,0 +1,235 @@
+@import './smart-grid';
+@import './mixins';
+
+@include reset();
+
+@font-face {
+    font-family: "Gilroy";
+    src: url(../fonts/Gilroy-Bold.eot) format("eot"),
+         url(../fonts/Gilroy-Bold.ttf) format("truetype"),
+         url(../fonts/Gilroy-Bold.woff) format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url(../fonts/Gilroy-Thin.eot) format("eot"),
+         url(../fonts/Gilroy-Thin.ttf) format("truetype"),
+         url(../fonts/Gilroy-Thin.woff) format("woff");
+    font-weight: thin;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url(../fonts/Gilroy-Regular.eot) format("eot"),
+         url(../fonts/Gilroy-Regular.ttf) format("truetype"),
+         url(../fonts/Gilroy-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+*:focus {
+    outline: none;
+}
+
+html.fonts-loaded body {
+    font-family: 'Gilroy', sans-serif;
+}
+
+body {
+    font-size: 16px;
+    font-display: swap;
+}
+
+.ps {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.row-inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    @include wrapper();
+}
+
+.show-xs {
+    display: none !important;
+    @include xs(display, block !important);
+}
+
+.show-sm {
+    display: none !important;
+    @include sm(display, block !important);
+}
+
+.hide-sm {
+    @include sm-block {
+        display: none !important;
+    }
+}
+
+.hide-xs {
+    @include xs-block {
+        display: none !important;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.title-primary {
+    font-size: 50px;
+    color: rgb(17, 15, 15);
+    text-align: center;
+    font-weight: bold;
+
+    @include sm-block {
+        font-size: 34px;
+    }
+
+    @include xs-block {
+        font-size: 24px;
+    }
+
+    &.white {
+        color: #fff;
+    }
+
+}
+
+.title-secondary {
+    color: #141414;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    @include md-block {
+        font-size: 22px;
+    }
+}
+
+.title-tertiary {
+    font-size: 23px;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: center;
+
+    @include sm-block {
+        font-size: 20px;
+    }
+}
+
+.desc-primary {
+    text-align: center;
+    font-size: 16px;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hr {
+    width: 300px;
+    height: 3px;
+    background-color: #333;
+    margin: 30px auto;
+}
+
+.row {
+    @include row-flex();
+}
+
+.text-center {
+    text-align: center;
+}
+
+.overhidden {
+    @include sm-block {
+        overflow: hidden;
+    }
+}
+
+button {
+    -webkit-appearance: none;
+}
+
+.telegram-btn {
+    font-size: 20px;
+    padding: 10px 12px;
+    color: #fff;
+    border: none;
+    background-color: #0dace8;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 2px solid #0dace8;
+    border-radius: 2px;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        color: #fff;
+        background-color: #0dace8;
+    }
+
+    @media only screen and (max-width: 576px) {
+        font-size: 16px;
+        line-height: 1;
+        letter-spacing: 0.5px;
+    }
+}
+
+.text-important {
+    color: #62a0e6;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-image: linear-gradient(to top, #5089c9 0%, #93c4fc 100%);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    padding: 28px 50px;
+    color: #fff;
+    border-bottom: 4px solid #3b699c;
+
+    @include sm-block {
+        padding: 13px 15px;
+    }
+
+    @include xs-block [
+        padding: 9px 11px;
+    ]
+}

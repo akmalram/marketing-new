@@ -1,0 +1,497 @@
+@import './smart-grid';
+
+$color-primary: #333;
+$color-secondary: #fff;
+
+.navbar {
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .2s ease-in-out;
+    z-index: 1111;
+
+    &.scrolled &-menu .item {
+        height: 70px;
+    }
+
+    &-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &-logo {
+        a {
+            font-size: 24px;
+            color: #62a0e6;
+
+            @include md-block {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .checkbox-opener {
+        display: none;
+    }
+
+    &-menu {
+        box-sizing: border-box;
+
+        .list {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .item {
+            margin: 0 7px;
+            height: 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: height 200ms ease-in-out;
+
+            position: relative;
+
+            @include md-block {
+                height: 70px;
+            }
+        }
+
+        .link {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            display: inline-block;
+            padding: 7px;
+            border-radius: 5px;
+            overflow: hidden;
+
+            // button animation
+            position: relative;
+            transition: all .1s ease-in-out;
+
+            &:hover {
+                color: #e66262;
+                transform: translateY(-1px);
+            }
+        }
+    }
+
+    &-toggler {
+        .btn {
+            width: 35px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1111;
+        }
+
+        .btn .lines {
+            width: 80%;
+            height: 3px;
+            background: #000;
+            border-radius: 10px;
+            transition: all .3s ease-in-out;
+            transform: rotate(0) translate(0, 0);
+        }
+
+        .btn.active {
+            .line-2 {
+                opacity: 0;
+            }
+
+            .line-1 {
+                transform: rotate(221deg) translate(-5px, -6px);
+            }
+
+            .line-3 {
+                transform: rotate(-220deg) translate(-6px, 7px);
+            }
+        }
+    }
+
+    &-submenu {
+        @media only screen and (min-width: 769px) {
+            min-width: 200px;
+            border-top: 3px solid #0dace8;
+            position: absolute;
+            top: 100%;
+            padding: 20px 0;
+            background: #fff;
+            border-radius: 0 0 3px 3px;
+            opacity: 0;
+            transform: translateY(40px);
+            visibility: hidden;
+            transition: all .2s ease-in-out;
+            box-sizing: border-box;
+
+
+            .subitem {
+                margin: 10px 0;
+            }
+
+            .sublink {
+                display: inline-block;
+                font-size: 15px;
+                font-weight: 400;
+                color: #333;
+                padding: 3px 20px;
+                transition: all .2s ease-in-out;
+                white-space: nowrap;
+
+                &:hover {
+                    padding-left: 25px;
+                    padding-right: 15px;
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    &-submenu.big {
+        @media only screen and (min-width: 769px) {
+            width: 100%;
+            left: 0;
+            padding: 0 10px;
+
+
+            .row-inner {
+                justify-content: space-evenly;
+            }
+
+            .sublist {
+                width: 25%;
+                box-sizing: border-box;
+
+                &:not(:last-of-type) {
+                    border-right: 1px solid #d3d3d3;
+                }
+            }
+
+            .sublist-heading {
+                margin: 15px 0;
+                font-weight: bold;
+                text-align: center;
+
+                a {
+                    display: block;
+                    color: #0f2027;
+                    font-size: 16px;
+                    text-align: center;
+                }
+            }
+
+            .sublink {
+                white-space: normal;
+            }
+        }
+
+    }
+
+    &-menu .item:hover &-submenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    &-menu .item:hover + &-submenu.big, &-submenu.big:hover {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    &-contacts {
+        text-align: center;
+        .phone-call {
+            a {
+                font-size: 19px;
+                color: #000;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .telegram {
+            margin-bottom: 5px;
+
+            .telegram-btn {
+                font-size: 16px;
+                padding: 4px 6px;
+            }
+        }
+    }
+}
+
+
+// Media Small
+
+@include sm-block {
+    .navbar {
+        padding: 10px 0;
+        background-color: #fff;
+
+        &-inner {
+            flex-wrap: wrap;
+        }
+
+        // Flex ordering
+        &-contacts {
+            order: 3;
+            width: 33%;
+        }
+
+        &-logo {
+            order: 2;
+            width: 33%;
+            margin-right: auto;
+            margin-left: 10px;
+        }
+
+        &-toggler {
+            order: 1;
+            width: auto;
+        }
+        // Flex ordering
+
+
+        &-logo {
+            text-align: center;
+            a {
+                font-size: 20px;
+            }
+        }
+
+        &-toggler {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        &-menu {
+            position: fixed;
+            left: -100%;
+            top: 0;
+            height: 100%;
+            transition: all .3s ease-in-out;
+            background: #fff;
+            padding: 50px 20px;
+
+            &.active {
+                left: 0;
+            }
+
+            .list {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+
+            .item {
+                margin: 0;
+                height: auto;
+                position: static;
+                display: block;
+                width: 100%;
+            }
+
+            .link {
+                display: block;
+                font-size: 20px;
+                color: #000;
+
+                label {
+                    display: flex;
+                    width: 100%;
+
+                    i {
+                        margin-left: auto;
+                        margin-right: 10px;
+                        font-size: 16px;
+                        transition: transform .3s ease-in-out;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+
+        &-menu-contact-info {
+            margin-top: 90px;
+            .phone-call a, .email a {
+                color: #000;
+                font-size: 18px;
+
+                i {
+                    margin-right: 5px;
+                    display: inline-block !important;
+                }
+            }
+
+            .phone-call,
+            .telegram,
+            .email {
+                margin-bottom: 9px;
+            }
+
+            .address i {
+                margin-right: 5px;
+                font-size: 19px;
+            }
+        }
+
+        &-menu &-logo {
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        &-contacts {
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .telegram {
+                margin-bottom: 0;
+                margin-left: 5px;
+            }
+
+            .phone-call {
+                a {
+                    font-size: 14px;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+@include xs-block {
+    .navbar {
+        &-menu {
+            width: 100%;
+        }
+
+        &-contacts {
+            display: flex;
+            align-items: center;
+
+            .phone-call {
+                a {
+                    display: inline-block;
+                    font-size: 12px;
+                    border: 2px solid #333;
+                    border-radius: 5px;
+                    padding: 4px 6px;
+                }
+            }
+
+            .phone-call i, .telegram i{
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+// Submenu adaptive
+
+@include sm-block {
+    .navbar {
+        &-menu {
+            overflow-y: scroll;
+        }
+
+        &.scrolled {
+            .item {
+                height: auto !important;
+            }
+        }
+
+        .checkbox-opener:checked + .item &-submenu {
+            opacity: 1;
+            max-height: 200px;
+        }
+
+        #list-1:checked ~ &-submenu.big {
+            opacity: 1;
+            max-height: 1500px;
+        }
+
+        .list > .checkbox-opener:checked + .item label i {
+            transform: rotate(90deg);
+        }
+
+        &-submenu {
+            display: block;
+            position: static;
+            opacity: 0;
+            max-height: 0px;
+            overflow: hidden;
+            transition: all .3s ease-in-out;
+
+            .row-inner {
+                display: block;
+            }
+
+            .sublist {
+                width: auto !important;
+                border-right: 0 !important;
+
+                &-heading {
+                    padding-left: 20px;
+                    margin: 5px 0;
+
+                    label {
+                        display: flex;
+
+                        i {
+                            display: block;
+                            margin-left: auto;
+                            margin-right: 10px;
+                            transition: transform .3s ease-in-out;
+                        }
+                    }
+                }
+            }
+
+            .subitem {
+                padding-left: 10px;
+            }
+
+            .sublink {
+                color: #333;
+                display: inline-block;
+                margin: 5px 0;
+            }
+        }
+
+        &-submenu.big {
+
+            .checkbox-opener:checked + .sublist .subitem {
+                max-height: 30px;
+                opacity: 1;
+            }
+
+            .checkbox-opener:checked + .sublist .sublist-heading label i {
+                transform: rotate(90deg);
+            }
+
+            .subitem {
+                margin: 0;
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: all .3s ease-in-out;
+                padding-left: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,342 @@
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset, img, abbr {
+  border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+legend {
+  color: #000;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Bold.eot) format("eot"), url(../fonts/Gilroy-Bold.ttf) format("truetype"), url(../fonts/Gilroy-Bold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Thin.eot) format("eot"), url(../fonts/Gilroy-Thin.ttf) format("truetype"), url(../fonts/Gilroy-Thin.woff) format("woff");
+  font-weight: thin;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Regular.eot) format("eot"), url(../fonts/Gilroy-Regular.ttf) format("truetype"), url(../fonts/Gilroy-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+*:focus {
+  outline: none;
+}
+
+html.fonts-loaded body {
+  font-family: 'Gilroy', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  font-display: swap;
+}
+
+.ps {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.row-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.show-xs {
+  display: none !important;
+}
+
+@media screen and (max-width: 576px) {
+  .show-xs {
+    display: block !important;
+  }
+}
+
+.show-sm {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .show-sm {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hide-sm {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hide-xs {
+    display: none !important;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.title-primary {
+  font-size: 50px;
+  color: #110f0f;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .title-primary {
+    font-size: 34px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title-primary {
+    font-size: 24px;
+  }
+}
+
+.title-primary.white {
+  color: #fff;
+}
+
+.title-secondary {
+  color: #141414;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1024px) {
+  .title-secondary {
+    font-size: 22px;
+  }
+}
+
+.title-tertiary {
+  font-size: 23px;
+  color: #333;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .title-tertiary {
+    font-size: 20px;
+  }
+}
+
+.desc-primary {
+  text-align: center;
+  font-size: 16px;
+}
+
+.flex-around {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex-evenly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hr {
+  width: 300px;
+  height: 3px;
+  background-color: #333;
+  margin: 30px auto;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .overhidden {
+    overflow: hidden;
+  }
+}
+
+button {
+  -webkit-appearance: none;
+}
+
+.telegram-btn {
+  font-size: 20px;
+  padding: 10px 12px;
+  color: #fff;
+  border: none;
+  background-color: #0dace8;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  border: 2px solid #0dace8;
+  border-radius: 2px;
+}
+
+.telegram-btn:hover, .telegram-btn:focus {
+  outline: none;
+  color: #fff;
+  background-color: #0dace8;
+}
+
+@media only screen and (max-width: 576px) {
+  .telegram-btn {
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.5px;
+  }
+}
+
+.text-important {
+  color: #62a0e6;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#5089c9), to(#93c4fc));
+  background-image: linear-gradient(to top, #5089c9 0%, #93c4fc 100%);
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: 28px 50px;
+  color: #fff;
+  border-bottom: 4px solid #3b699c;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-primary {
+    padding: 13px 15px;
+  }
+}
+/*# sourceMappingURL=general.css.map */
