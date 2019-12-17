@@ -9,7 +9,7 @@ header {
 
 @media screen and (max-width: 768px) {
   header {
-    padding: 6vh 0;
+    padding: 70px 0;
     background: #fff;
     min-height: 50vh;
   }

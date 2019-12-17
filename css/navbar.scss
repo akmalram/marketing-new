@@ -16,6 +16,11 @@ $color-secondary: #fff;
         height: 70px;
     }
 
+    &.scrolled {
+        background-color: #fff;
+        border-bottom: 3px solid #000;
+    }
+
     &-inner {
         display: flex;
         align-items: center;
