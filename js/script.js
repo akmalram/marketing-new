@@ -19,85 +19,48 @@ ready(() => {
     MenuClassToggler();
 });
 
-// ready(() => {
-//     let mySwiper = new Swiper('.swiper-container.aboutus-slider', {
-//         speed: 400,
-//         navigation: {
-//             nextEl: '.swiper-button-next',
-//             prevEl: '.swiper-button-prev',
-//         },
-//         pagination: {
-//             el: '.swiper-pagination',
-//             dynamicBullets: true,
-//         },
-//         effect: 'fade',
-//         fadeEffect: {
-//             crossFade: true
-//         },
-//         autoplay: {
-//             delay: 3000,
-//         },
-//         loop: true
-//     });
-//     let clientsSlider = new Swiper('.swiper-container.clients-slider', {
-//         speed: 400,
-//         slidesPerView: 4,
-//         spaceBetween: 30,
-//         cssMode: true,
-//         loop: true,
-//         pagination: {
-//             el: '.swiper-pagination',
-//             clickable: true,
-//         },
-//         autoplay: {
-//             delay: 2e3,
-//             disableOnInteraction: false,
-//         },
-//         breakpoints: {
-//             1020: {
-//                 slidesPerView: 3,
-//             },
-//             768: {
-//                 slidesPerView: 2,
-//             },
-//             520: {
-//                 slidesPerView: 1,
-//             },
-//         }
-//     });
-//     let sertificatesSlider = new Swiper('.swiper-container.sertificate-slider', {
-//         speed: 400,
-//         slidesPerView: 3,
-//         spaceBetween: 30,
-//         loop: true,
-//         navigation: {
-//             nextEl: '.swiper-button-next',
-//             prevEl: '.swiper-button-prev',
-//         },
-//         autoplay: {
-//             delay: 2e3,
-//             disableOnInteraction: false,
-//         },
-//         breakpoints: {
-//             520: {
-//                 slidesPerView: 2,
-//             },
-//         }
-//     });
-
-//     let fullslider = new Swiper('.swiper-container.full-slider', {
-//         speed: 400,
-//         loop: true,
-//         spaceBetween: 50,
-//         autoplay: {
-//             delay: 3000,
-//         },
-//         navigation: {
-//             nextEl: '.swiper-button-next',
-//             prevEl: '.swiper-button-prev',
-//         },
-//     })
-// });
+ready(() => {
+    let mySwiper = new Swiper('.swiper-container.aboutus-slider', {
+        speed: 400,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
+        },
+        loop: true
+    });
+    let clientsSlider = new Swiper('.swiper-container.clients-slider', {
+        speed: 400,
+        slidesPerView: 4,
+        slidesPerColumn: 2,
+        spaceBetween: 30,
+        cssMode: true,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 2e3,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            1020: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 2,
+                slidesPerColumn: 1,
+            },
+            520: {
+                slidesPerView: 1,
+                slidesPerColumn: 1,
+            },
+        }
+    });
+});
 
 ready(() => {
     const element = document.querySelector('.navbar');

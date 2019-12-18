@@ -15,6 +15,18 @@ main {
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 768px) {
+  .presentation .title-primary {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .presentation .title-primary {
+    margin-bottom: 20px;
+  }
+}
+
 .presentation .item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -209,5 +221,135 @@ main {
   max-width: 80%;
   text-align: left;
   font-size: 18px;
+}
+
+.about-us {
+  padding: 80px 0;
+}
+
+.about-us .properties {
+  text-align: center;
+}
+
+.about-us .properties .item {
+  width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-us .properties .item {
+    margin-bottom: 20px;
+  }
+}
+
+.about-us .properties .item .primary-heading {
+  color: #62a0e6;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.about-us .properties .item p {
+  color: #aeaeae;
+  font-size: 18px;
+}
+
+.about-us .aboutus-slider {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.about-us .aboutus-slider .swiper-slide {
+  text-align: center;
+}
+
+.about-us .aboutus-slider .swiper-button-prev,
+.about-us .aboutus-slider .swiper-button-next {
+  background: none;
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-us .aboutus-slider .swiper-button-prev,
+  .about-us .aboutus-slider .swiper-button-next {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.about-us .info {
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: center;
+  color: #141414;
+  font-size: 18px;
+}
+
+.about-us .sm-banner {
+  max-width: 750px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  padding: 35px 65px;
+  -webkit-box-shadow: 0 0 90px rgba(0, 0, 0, 0.1), inset 0 0 0 11px #fff, inset 0 0 0 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 90px rgba(0, 0, 0, 0.1), inset 0 0 0 11px #fff, inset 0 0 0 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .about-us .sm-banner {
+    text-align: center;
+    padding: 30px 10px;
+  }
+}
+
+.about-us .sm-banner p {
+  color: #141414;
+  font-size: 18px;
+}
+
+.about-us .sm-banner .pencil {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media screen and (max-width: 768px) {
+  .about-us .sm-banner .pencil {
+    display: none;
+  }
+}
+
+.projects img {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.projects .item {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.projects .item .title {
+  min-height: 59px;
+}
+
+@media screen and (max-width: 768px) {
+  .projects .item .title {
+    min-height: auto;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.projects .item:hover {
+  -webkit-box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.clients .swiper-slide {
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

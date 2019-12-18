@@ -142,6 +142,13 @@ img {
     flex-wrap: wrap;
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .flex-between {
     display: flex;
     justify-content: space-between;
