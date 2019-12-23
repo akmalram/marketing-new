@@ -104,6 +104,25 @@ body {
       flex-wrap: wrap;
 }
 
+.swiper-slide {
+  text-align: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: none !important;
+  width: 50px !important;
+  height: 50px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -158,6 +177,51 @@ img {
   max-width: 100%;
 }
 
+.page-title {
+  line-height: 72px;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-top: 5vh;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-title {
+    font-size: 46px;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-title {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .page-title {
+    font-size: 23px;
+  }
+}
+
+.title-secondary {
+  margin-top: 3vh;
+}
+
+@media screen and (max-width: 768px) {
+  .title-secondary {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title-secondary {
+    font-size: 18px;
+  }
+}
+
 .title-primary {
   font-size: 36px;
   color: #141414;
@@ -182,7 +246,6 @@ img {
 }
 
 .title-secondary {
-  color: #141414;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.5;
@@ -191,6 +254,12 @@ img {
 @media screen and (max-width: 1024px) {
   .title-secondary {
     font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title-secondary {
+    font-size: 20px;
   }
 }
 
@@ -337,15 +406,16 @@ button {
 
 .btn-primary {
   display: inline-block;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#5089c9), to(#93c4fc));
-  background-image: linear-gradient(to top, #5089c9 0%, #93c4fc 100%);
   border-radius: 5px;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.2;
   padding: 28px 50px;
+  border-bottom: 4px solid;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#5089c9), to(#93c4fc));
+  background-image: linear-gradient(to top, #5089c9 0%, #93c4fc 100%);
+  border-bottom-color: #3b699c;
   color: #fff;
-  border-bottom: 4px solid #3b699c;
 }
 
 @media screen and (max-width: 768px) {
@@ -356,6 +426,32 @@ button {
 
 @media screen and (max-width: 576px) {
   .btn-primary {
+    padding: 9px 11px;
+  }
+}
+
+.btn-secondary {
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: 28px 50px;
+  border-bottom: 4px solid;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#b0b0b0), to(#eaeaea));
+  background-image: linear-gradient(to top, #b0b0b0 0%, #eaeaea 100%);
+  border-bottom-color: #666666;
+  color: #666666;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-secondary {
+    padding: 13px 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .btn-secondary {
     padding: 9px 11px;
   }
 }

@@ -19,6 +19,14 @@
   border-bottom: 3px solid #000;
 }
 
+.navbar.scrolled .navbar-menu .link {
+  color: #000;
+}
+
+.navbar.scrolled .navbar-contacts .phone-call a {
+  color: #141414;
+}
+
 .navbar-inner {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -1,0 +1,71 @@
+header {
+  min-height: 100vh;
+  background: url(../imgs/header-bg.png) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  padding-top: 10vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 70px 0;
+    min-height: 50vh;
+  }
+}
+
+header .header-content .page-title {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  header .header-content {
+    text-align: center;
+  }
+}
+
+header .header-content .buttons {
+  margin-top: 8vh;
+}
+
+@media screen and (max-width: 1024px) {
+  header .header-content .buttons {
+    margin-top: 3vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header .header-content .buttons {
+    margin-top: 15px;
+  }
+}
+
+header .header-content .buttons a {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  header .header-content .buttons a {
+    margin-top: 10px;
+  }
+}
+
+header .header-content .service-info {
+  margin-top: 140px;
+}
+
+header .navbar-menu .link {
+  color: #fff;
+}
+
+header .navbar-contacts .phone-call a {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  header .navbar-contacts .phone-call a {
+    color: #141414;
+  }
+}
+/*# sourceMappingURL=inner-header.css.map */

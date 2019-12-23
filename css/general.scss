@@ -53,6 +53,22 @@ body {
     flex-wrap: wrap;
 }
 
+.swiper-slide {
+    text-align: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background: none !important;
+    width: 50px !important;
+    height: 50px !important;
+
+    @include sm-block {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+
 .container {
     @include wrapper();
 }
@@ -87,6 +103,41 @@ img {
     max-width: 100%;
 }
 
+.page-title {
+    line-height: 72px;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-top: 5vh;
+
+    @include md-block {
+        font-size: 46px;
+        line-height: 1.2;
+    }
+
+    @include sm-block {
+        font-size: 35px;
+    }
+
+    @include xs-block {
+        font-size: 23px;
+    }
+}
+
+.title-secondary {
+    margin-top: 3vh;
+
+    @include sm-block {
+        font-size: 20px;
+        line-height: 1.2;
+        margin-top: 30px;
+    }
+
+    @include xs-block {
+        font-size: 18px;
+    }
+}
+
 .title-primary {
     font-size: 36px;
     color: #141414;
@@ -108,13 +159,16 @@ img {
 }
 
 .title-secondary {
-    color: #141414;
     font-size: 24px;
     font-weight: 400;
     line-height: 1.5;
 
     @include md-block {
         font-size: 22px;
+    }
+
+    @include md-block {
+        font-size: 20px;
     }
 }
 
@@ -221,16 +275,14 @@ button {
     text-decoration: underline;
 }
 
-.btn-primary {
+@mixin btn {
     display: inline-block;
-    background-image: linear-gradient(to top, #5089c9 0%, #93c4fc 100%);
     border-radius: 5px;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.2;
     padding: 28px 50px;
-    color: #fff;
-    border-bottom: 4px solid #3b699c;
+    border-bottom: 4px solid;
 
     @include sm-block {
         padding: 13px 15px;
@@ -239,4 +291,18 @@ button {
     @include xs-block {
         padding: 9px 11px;
     }
+}
+
+.btn-primary {
+    @include btn();
+    background-image: linear-gradient(to top, #5089c9 0%, #93c4fc 100%);
+    border-bottom-color: #3b699c;
+    color: #fff;
+}
+
+.btn-secondary {
+    @include btn();
+    background-image: linear-gradient(to top, #b0b0b0 0%, #eaeaea 100%);
+    border-bottom-color: #666666;
+    color: #666666;
 }

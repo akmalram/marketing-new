@@ -2,6 +2,10 @@
 
 main {
     padding: 100px 0;
+
+    @include sm-block {
+        padding: 20px 0;
+    }
 }
 
 .presentation {
@@ -201,18 +205,6 @@ main {
         .swiper-slide {
             text-align: center;
         }
-
-        .swiper-button-prev,
-        .swiper-button-next {
-            background: none;
-            width: 50px;
-            height: 50px;
-
-            @include sm-block {
-                width: 30px;
-                height: 30px;
-            }
-        }
     }
 
     .info {
@@ -282,5 +274,88 @@ main {
 .clients {
     .swiper-slide {
         text-align: center;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        background: none;
+        width: 50px;
+        height: 50px;
+
+        @include sm-block {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.service-info {
+    background: #fff;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 50px 0;
+
+    .item {
+        @include col();
+        @include size(6);
+        @include size-sm(12);
+        @include size-xs(24);
+
+        text-align: center;
+        padding: 30px;
+        color: #000000;
+    }
+
+    .item {
+        .heading {
+            font-size: 24px;
+            font-weight: bold;
+
+            @include md-block {
+                font-size: 22px;
+            }
+        }
+
+        .icon {
+            margin: 20px 0;
+            color: #62a0e6;
+            font-size: 45px;
+        }
+
+        .text {
+            font-size: 18px;
+
+            @include md-block {
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+.with-hand {
+    position: relative;
+    .hand {
+        position: relative;
+        z-index: 10;
+
+        img {
+            position: absolute;
+            bottom: 100%;
+            right: 0%;
+
+            @include md-block {
+                max-width: 400px;
+            }
+        }
+
+        @include sm-block {
+            display: none;
+        }
+
+    }
+
+    .service-info {
+        position: relative;
+        z-index: 50;
     }
 }

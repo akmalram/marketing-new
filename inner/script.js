@@ -38,9 +38,9 @@ ready(() => {
         spaceBetween: 30,
         cssMode: true,
         loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
         autoplay: {
             delay: 2e3,
@@ -59,6 +59,15 @@ ready(() => {
                 slidesPerColumn: 1,
             },
         }
+    });
+
+    let sliderBig = new Swiper('.swiper-container.slider-big', {
+        speed: 400,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        loop: true
     });
 });
 
@@ -98,7 +107,6 @@ ready(() => {
     });
 });
 
-// Font Observing
 
 const fontAwesomeFreeObserver = new FontFaceObserver('Font Awesome 5 Free');
 const fontAwesomeBrandsObserver = new FontFaceObserver('Font Awesome 5 Brands');

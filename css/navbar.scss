@@ -21,6 +21,14 @@ $color-secondary: #fff;
         border-bottom: 3px solid #000;
     }
 
+    &.scrolled &-menu .link {
+        color: #000;
+    }
+
+    &.scrolled &-contacts .phone-call a {
+        color: #141414;
+    }
+
     &-inner {
         display: flex;
         align-items: center;

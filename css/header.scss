@@ -14,42 +14,6 @@ header {
     }
 
     .header-content {
-        .page-title {
-            color: #141414;
-            line-height: 72px;
-            font-size: 60px;
-            text-transform: uppercase;
-            font-weight: bolder;
-            margin-top: 5vh;
-
-            @include md-block {
-                font-size: 46px;
-                line-height: 1.2;
-            }
-
-            @include sm-block {
-                font-size: 35px;
-            }
-
-            @include xs-block {
-                font-size: 23px;
-            }
-        }
-
-        .title-secondary {
-            margin-top: 3vh;
-
-            @include sm-block {
-                font-size: 20px;
-                line-height: 1.2;
-                margin-top: 30px;
-            }
-
-            @include xs-block {
-                font-size: 18px;
-            }
-        }
-
         .download-presentation {
             margin-top: 8vh;
 
