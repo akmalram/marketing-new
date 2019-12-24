@@ -1,5 +1,6 @@
 main {
   padding: 100px 0;
+  color: #141414;
 }
 
 @media screen and (max-width: 768px) {
@@ -448,5 +449,203 @@ main {
 .with-hand .service-info {
   position: relative;
   z-index: 50;
+}
+
+.slider-big {
+  padding: 40px 0;
+}
+
+.advantages {
+  padding: 80px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .advantages {
+    padding: 60px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .advantages {
+    padding: 30px 0;
+  }
+}
+
+.advantages .row {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.advantages .item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(25% - 30px);
+  text-align: center;
+  margin-bottom: 30px;
+  max-width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .advantages .item {
+    width: calc(50% - 30px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .advantages .item {
+    width: calc(100% - 30px);
+  }
+}
+
+.advantages .item .icon {
+  margin-bottom: 30px;
+}
+
+.advantages .item .heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.advantages .item .text {
+  color: #838282;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.banner-accordion {
+  padding: 80px 0;
+  background: url(../imgs/banner-bg.png) no-repeat center center;
+  background-size: cover;
+  -webkit-box-shadow: inset 0 0 0 3000px rgba(0, 0, 0, 0.6);
+          box-shadow: inset 0 0 0 3000px rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-accordion {
+    padding: 60px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-accordion {
+    padding: 30px 0;
+  }
+}
+
+.accordion {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.accordion .item {
+  margin: 20px 0;
+}
+
+.accordion .item .checkbox {
+  display: none;
+  visibility: hidden;
+}
+
+.accordion .item .label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: center;
+  cursor: pointer;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.accordion .item .check-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  background-color: #62a0e6;
+  font-size: 36px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+@media screen and (max-width: 576px) {
+  .accordion .item .check-icon {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+  }
+}
+
+.accordion .item .check-icon span {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.accordion .item .check-title {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 1024px) {
+  .accordion .item .check-title {
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .accordion .item .check-title {
+    font-size: 15px;
+  }
+}
+
+.accordion .item .text {
+  text-align: center;
+  font-size: 0;
+  opacity: 0;
+  -webkit-transition: all .1s ease;
+  transition: all .1s ease;
+  padding: 0;
+  letter-spacing: 1px;
+}
+
+.accordion .item .checkbox:checked ~ .text {
+  font-size: 16px;
+  padding: 30px 0;
+  opacity: 1;
+}
+
+.accordion .item .checkbox:checked ~ .label .check-icon {
+  background-color: #dd5f5f;
+}
+
+.accordion .item .checkbox:checked ~ .label .check-icon span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 /*# sourceMappingURL=main.css.map */
