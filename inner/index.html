@@ -30,6 +30,23 @@
 </head>
 
 <body>
+    <div class="modal modal-order">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <form action="/" class="form-modal">
+                <h2 class="modal-heading">Оставить заявку</h2>
+                <input class="modal-input-name" type="text" name="name" placeholder="Ваше имя" required="true">
+                <input class="modal-input-phone" type="tel" name="phone" placeholder="Ваш номер" required="true">
+                <input type="hidden" name="hidden" value="СММ">
+                <input class="modal-submit btn-primary" type="submit" value="Отправить">
+            </form>
+            <div class="done">
+                <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTEuOTk5IDUxMS45OTkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMS45OTkgNTExLjk5OTsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxwYXRoIHN0eWxlPSJmaWxsOiNBNUVCNzg7IiBkPSJNNDI3LjUzNCw3My4wODRsLTIyNC41MSwyMjQuNTFjLTYuMDUxLDYuMDUxLTE1Ljg2Myw2LjA1MS0yMS45MTQsMGwtOTYuNjQ1LTk2LjY0NUw4LjA5OSwyNzcuMzEzICBsMTQ1Ljc4NSwxNDUuNzg1YzEwLjEyNywxMC4xMjcsMjMuODYyLDE1LjgxNiwzOC4xODMsMTUuODE2bDAsMGMxNC4zMiwwLDI4LjA1Ny01LjY5LDM4LjE4Mi0xNS44MTZsMjczLjY1LTI3My42NUw0MjcuNTM0LDczLjA4NHoiLz4KPGcgc3R5bGU9Im9wYWNpdHk6MC4xOyI+Cgk8cGF0aCBkPSJNNDc4LjY0NiwxMjQuMTk2TDE4OS43NTQsNDEzLjA4N2MtNy45OTMsNy45OTItMTguMDQzLDEzLjQ0Mi0yOC45MDIsMTUuODcyYzkuMDY2LDYuNDI1LDE5Ljk1Niw5Ljk1NSwzMS4yMTUsOS45NTVsMCwwICAgYzE0LjMyLDAsMjguMDU3LTUuNjksMzguMTgyLTE1LjgxNmwyNzMuNjUtMjczLjY1TDQ3OC42NDYsMTI0LjE5NnoiLz4KPC9nPgo8cGF0aCBkPSJNMTkyLjA2OCw0NDcuMDE0Yy0xNi41ODcsMC0zMi4xODItNi40NTktNDMuOTEyLTE4LjE4OUwyLjM3MiwyODMuMDRjLTMuMTYzLTMuMTYzLTMuMTYzLTguMjkyLDAtMTEuNDU0bDc2LjM2Ni03Ni4zNjYgIGMzLjE2NC0zLjE2Myw4LjI5Mi0zLjE2MywxMS40NTUsMGwyOC42NjgsMjguNjY3YzMuMTYzLDMuMTYzLDMuMTYzLDguMjkyLDAsMTEuNDU0Yy0zLjE2NSwzLjE2My04LjI5MywzLjE2Mi0xMS40NTUsMGwtMjIuOTQtMjIuOTQgIGwtNjQuOTExLDY0LjkxMWwxNDAuMDU4LDE0MC4wNThjOC42NjksOC42NjksMjAuMTk1LDEzLjQ0MywzMi40NTYsMTMuNDQzYzEyLjI2LDAsMjMuNzg1LTQuNzc1LDMyLjQ1Ni0xMy40NDNsMTg2Ljk1MS0xODYuOTUyICBjMy4xNjMtMy4xNjMsOC4yOTEtMy4xNjQsMTEuNDU1LDBjMy4xNjMsMy4xNjMsMy4xNjMsOC4yOTIsMCwxMS40NTRMMjM1Ljk3OSw0MjguODI2ICBDMjI0LjI0OCw0NDAuNTU1LDIwOC42NTMsNDQ3LjAxNCwxOTIuMDY4LDQ0Ny4wMTR6Ii8+CjxwYXRoIGQ9Ik0xOTIuMDY4LDMxMC4yMzJjLTYuMzAzLDAtMTIuMjI4LTIuNDU0LTE2LjY4NC02LjkxMWwtNDUuMDY4LTQ1LjA2OGMtMy4xNjMtMy4xNjMtMy4xNjMtOC4yOTIsMC0xMS40NTQgIGMzLjE2NC0zLjE2Myw4LjI5Mi0zLjE2MywxMS40NTUsMGw0NS4wNjgsNDUuMDY4YzEuMzk2LDEuMzk2LDMuMjU0LDIuMTY1LDUuMjI5LDIuMTY1czMuODMzLTAuNzY5LDUuMjMtMi4xNjZMNDIxLjgwNiw2Ny4zNTcgIGMzLjE2NC0zLjE2Myw4LjI5Mi0zLjE2MywxMS40NTUsMGw3Ni4zNjYsNzYuMzY2YzEuNTE4LDEuNTE4LDIuMzcyLDMuNTc5LDIuMzcyLDUuNzI3cy0wLjg1Myw0LjIwOS0yLjM3Miw1LjcyN2wtNjMuNzg3LDYzLjc4NyAgYy0zLjE2NCwzLjE2My04LjI5MiwzLjE2Mi0xMS40NTUsMGMtMy4xNjMtMy4xNjMtMy4xNjMtOC4yOTIsMC0xMS40NTRsNTguMDYxLTU4LjA2bC02NC45MS02NC45MUwyMDguNzUyLDMwMy4zMjEgIEMyMDQuMjk1LDMwNy43NzcsMTk4LjM2OSwzMTAuMjMyLDE5Mi4wNjgsMzEwLjIzMnoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+                <h2 class="modal-heading">Ваша заявка успешно отправлена!</h2>
+            </div>
+            <div class="close-btn">+</div>
+        </div>
+    </div>
     <header>
         <nav class="navbar">
             <div class="container">
@@ -101,8 +118,8 @@
            <h1 class="page-title">Google Maps</h1>
            <h3 class="title-secondary">Ваша компания <a href="https://maps.google.com/" class="text-important">на карте Google</a>, <br class="hide-sm"> Вас находят быстро!</h3>
             <div class="buttons">
-                <a href="#" class="btn-primary">Заказать эту услугу</a>
-                <a href="#" class="btn-secondary">Вернуться</a>
+                <a href="#" class="btn-primary modal-order-btn">Заказать эту услугу</a>
+                <a href="../index.html" class="btn-secondary">Вернуться</a>
             </div>
             <div class="with-hand">
                 <div class="hand">
@@ -289,6 +306,127 @@
         </div>
 
         <div class="container">
+            <div class="clients-forever">
+                <div class="row-inner">
+                    <div class="content">
+                        <h2 class="title-primary">Заплатить 1 раз и получить <br class="hide-sm"> клиентов <span class="text-secondary">навсегда</span></h2>
+                        <h3 class="title-secondary">При создании Google Maps — запуск рекламы <br class="hide-sm"> на Facebook всего за <del>1 450 000</del> <span class="text-important price">1 000 000!</span></h3>
+                        <p class="ps">*при заказе более одной услуги действует только 1 акция с сайта</p>
+                        <p class="paragraph">Сервисом <b>Google Maps</b> каждый месяц пользуется более миллиарда человек.</p>
+                        <p class="paragraph">При помощи службы <b>Google Maps</b> люди ищут кафе, магазины, клиники, автосервисы и многое другое. Наибольшей популярностью пользуется поиск с мобильных устройств с <b>привязкой к локальным координатам пользователя.</b></p>
+                        <p class="paragraph">Подобный сервис сделает компанию более привлекательной в глазах клиента и <b>послужит своеобразной рекламой.</b></p>
+                        <p class="paragraph">Займите достойное место <b>на деловой карте Ташкента.</b></p>
+                    </div>
+                    <form class="form hide-sm">
+                        <p class="info">Отправьте заявку и получите <span class="text-important">бесплатную консультацию</span> от экспертов в области интернет-рекламы.</p>
+                        <input type="text" name="name" class="form-input" placeholder="Ваше имя" required>
+                        <input type="tel" name="phone" class="form-input" placeholder="Ваш телефон" required>
+                        <button type="submit" class="btn-primary form-submit">Отправить</button>
+                        <p class="ps">Нажимая на кнопку вы соглашаетесь с <a href="#" class="text-important">политикой конфиденциальности</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="team">
+            <div class="container">
+                <h2 class="title-primary">Кто настроит Ваш Google MyBusiness</h2>
+                <h4 class="title-tertiary">Команда настоящих профессионалов, знакомьтесь</h4>
+                <div class="row">
+                    <div class="item">
+                        <div class="img">
+                            <img src="../imgs/person.png" alt="Sotrudnik">
+                            <div class="post">
+                                <span class="post-icon"><img src="../imgs/user.png" alt="Icon"></span>
+                                <span class="post-text">Должность</span>
+                            </div>
+                        </div>
+                        <h3 class="name">Павел Кузьмин</h3>
+                        <p class="info">Для успеха не надо быть умнее других, надо просто быть на день быстрее большинства.</p>
+                    </div>
+                    <div class="item">
+                        <div class="img">
+                            <img src="../imgs/person.png" alt="Sotrudnik">
+                            <div class="post">
+                                <span class="post-icon"><img src="../imgs/user.png" alt="Icon"></span>
+                                <span class="post-text">Должность</span>
+                            </div>
+                        </div>
+                        <h3 class="name">Павел Кузьмин</h3>
+                        <p class="info">Для успеха не надо быть умнее других, надо просто быть на день быстрее большинства.</p>
+                    </div>
+                    <div class="item">
+                        <div class="img">
+                            <img src="../imgs/person.png" alt="Sotrudnik">
+                            <div class="post">
+                                <span class="post-icon"><img src="../imgs/user.png" alt="Icon"></span>
+                                <span class="post-text">Должность</span>
+                            </div>
+                        </div>
+                        <h3 class="name">Павел Кузьмин</h3>
+                        <p class="info">Для успеха не надо быть умнее других, надо просто быть на день быстрее большинства.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="price-list">
+                <h2 class="title-primary">Цены на разработку Landing Page</h2>
+                <h4 class="title-tertiary">Чем больше требований к сайту, тем он дороже</h4>
+                <div class="row">
+                    <div class="item">
+                        <h2 class="title">Mini-Landing</h2>
+                        <div class="css-padding">
+                            <p class="price"><sup>от</sup> 3.500.000 <sup>сум</sup></p>
+                            <ul class="points">
+                                <li>Индивидуальный дизайн</li>
+                                <li>3 продающих экрана</li>
+                                <li>Счетчик посещений</li>
+                                <li>Форма обратной связи</li>
+                                <li>Домен и хостинг на 1 год</li>
+                                <li>Мобильная версия</li>
+                            </ul>
+                            <button class="btn-primary modal-order-btn">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2 class="title">Landing page</h2>
+                        <div class="css-padding">
+                            <p class="price"><sup>от</sup> 7.500.000 <sup>сум</sup></p>
+                            <ul class="points">
+                                <li>Уникальный дизайн</li>
+                                <li>Маркетинговое исследование</li>
+                                <li>6 продающих экранов</li>
+                                <li>Сервис CallBack</li>
+                                <li>Продающий копирайтинг</li>
+                                <li>Домен и хостинг в подарок</li>
+                                <li>Мобильная версия</li>
+                            </ul>
+                            <button class="btn-primary modal-order-btn">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2 class="title">Multi-Landing</h2>
+                        <div class="css-padding">
+                            <p class="price"><sup>от</sup> 9.500.000 <sup>сум</sup></p>
+                            <ul class="points">
+                                <li>Уникальный дизайн</li>
+                                <li>Маркетинговое исследование</li>
+                                <li>10 продающих экранов</li>
+                                <li>Сервис CallBack</li>
+                                <li>Продающий копирайтинг</li>
+                                <li>Домен и хостинг на 1 год</li>
+                                <li>Интерактивная карта проезда</li>
+                                <li>Мобильная версия</li>
+                            </ul>
+                            <button class="btn-primary modal-order-btn">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="about-us">
                 <h2 class="title-primary">Сертифицированное рекламное агентство в Ташкенте</h2>
                 <h4 class="title-tertiary">Google и Яндекс доверяют нам</h4>

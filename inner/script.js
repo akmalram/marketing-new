@@ -91,22 +91,61 @@ ready(() => {
 });
 
 ready(() => {
-    const form = document.querySelector('.form');
+    const forms = document.querySelectorAll('.form');
+    const orderForm = document.querySelector('.modal-order .form-modal')
 
-    form.addEventListener('submit', e => {
+    forms.forEach(one => {
+        one.addEventListener('submit', e => {
+            e.preventDefault();
+            $.ajax({
+                method: 'POST',
+                url: '../send.php',
+                data: $(one).serialize()
+            }).done(() => {
+                alert('Done!')
+                one.reset();
+            });
+        });
+    });
+
+    orderForm.addEventListener('submit', (e) => {
         e.preventDefault();
-
         $.ajax({
-            method: 'POST',
-            url: '../send.php',
-            data: $(form).serialize()
-        }).done(() => {
-            alert('Done!')
-            form.reset();
+            method: "POST",
+            url: "../send.php",
+            data: $(orderForm).serialize(),
+        })
+        .done(function() {
+            orderForm.parentNode.classList.add('done');
+            onorderForme.reset();
         });
     });
 });
 
+ready(() => {
+    const modalToggler = (buttonClass, modalClass) => {
+        let btn = document.querySelectorAll(buttonClass),
+            modal = document.querySelector(modalClass),
+            closetBtn = document.querySelector(`${modalClass} .close-btn`),
+            modalBackground = document.querySelector(`${modalClass} .modal-background`);
+
+       if(modal) {
+        btn.forEach(one => {
+            one.addEventListener('click', () => {
+                modal.classList.add('active');
+            });
+        });
+
+        [closetBtn, modalBackground].forEach(one => {
+            one.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+        });
+       }
+    }
+
+    modalToggler('.modal-order-btn', '.modal-order');
+});
 
 const fontAwesomeFreeObserver = new FontFaceObserver('Font Awesome 5 Free');
 const fontAwesomeBrandsObserver = new FontFaceObserver('Font Awesome 5 Brands');

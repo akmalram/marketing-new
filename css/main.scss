@@ -254,6 +254,10 @@ main {
         box-shadow: 0 0 10px rgba(#000, .3);
     }
 
+    .row-inner {
+        justify-content: space-around;
+    }
+
     .item {
         box-shadow: none;
 
@@ -493,5 +497,288 @@ main {
             transform: rotate(45deg);
         }
 
+    }
+}
+
+.form {
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 10px #fff, inset 0 0 0 11px #e8e8e8, 0 20px 60px rgba($color: #000000, $alpha: .1);
+
+    @include sm-block {
+        padding: 21px;
+    }
+
+    .info {
+        margin-bottom: 30px;
+
+        @include sm-block {
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &-input {
+        width: 100%;
+        border: 0;
+        border-top: 3px solid #e9e9e9;
+        border-radius: 5px;
+        background-color: #f6f6f6;
+        padding: 24px 30px;
+        box-sizing: border-box;
+        margin: 10px 0;
+
+        @include sm-block {
+            padding: 12px 19px;
+        }
+    }
+
+    .ps {
+        margin-top: 10spx;
+    }
+
+    &-submit {
+        border: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px 0;
+        margin-bottom: 20px;
+
+        @include sm-block {
+            padding: 15px 0;
+        }
+    }
+}
+
+.clients-forever {
+    @include content-padding();
+    .row-inner {
+        flex-wrap: nowrap;
+    }
+
+    .form {
+        flex-shrink: 0;
+    }
+
+    .content {
+        .title-primary {
+            text-align: left;
+
+            @include xs-block {
+                text-align: center;
+            }
+        }
+
+        .title-secondary {
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .ps {
+            margin-bottom: 30px;
+        }
+
+        del {
+            color: #dd5f5f;
+            white-space: nowrap;
+            font-size: 15px;
+        }
+
+        .price {
+            font-size: 36px;
+
+            @include xs-block {
+                font-size: 18px;
+            }
+        }
+
+        .paragraph {
+            color: #000000;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 20px 0;
+
+            @include xs-block {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.team {
+    @include content-padding();
+    background-color: #f6f6f6;
+
+    .row {
+        margin-top: 50px;
+        justify-content: space-around;
+    }
+
+    .item {
+        @include col();
+        @include size(7);
+        @include size-sm(12);
+        @include size-xs(24);
+        @include sm(margin-bottom, 30px);
+
+        text-align: center;
+
+        .img {
+            display: inline-block;
+            position: relative;
+            background: red;
+            border-radius: 50%;
+            margin-bottom: 30px;
+
+            &:hover {
+                .post {
+                    width: 100%;
+                    height: 100%;
+
+                    &-icon {
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+
+                    &-text {
+                        visibility: visible;
+                        opacity: 1;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+
+
+            img {
+                vertical-align: bottom;
+            }
+
+            .post {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: #62a0e6;
+                transition: all .3s ease;
+                border-radius: 50%;
+                width: 45px;
+                height: 45px;
+
+
+                &-icon {
+                    width: 100%;
+                }
+
+                &-text {
+                    visibility: hidden;
+                    opacity: 0;
+                    font-size: 0px;
+                    font-weight: bold;
+                }
+
+                & > * {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: all .3s ease;
+                }
+            }
+        }
+
+        .name {
+            font-size: 24px;
+            color: #000000;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .info {
+            color: #727272;
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+}
+
+.price-list {
+    @include content-padding();
+    .row {
+        margin-top: 50px;
+        justify-content: space-around;
+    }
+
+    .item {
+        @include col();
+        @include size(8);
+        @include size-sm(12);
+        @include size-xs(24);
+
+        @include md-block {
+            margin-bottom: 30px;
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 340px;
+        min-width: 320px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        text-align: center;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+
+        .css-padding {
+            padding: 50px;
+            padding-top: 20px;
+            box-sizing: border-box;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            @include sm-block {
+                padding: 40px;
+            }
+
+            @include xs-block {
+                padding: 20px;
+            }
+        }
+
+        .title {
+            background-color: #62a0e6;
+            padding: 20px 0;
+            color: #ffffff;
+            font-size: 24px;
+            width: 100%;
+        }
+        .price {
+            color: #141414;
+            font-size: 30px;
+            font-weight: bold;
+            sup {
+                font-size: 15px;
+            }
+        }
+        .points {
+            margin: 20px 0;
+
+            li {
+                margin: 8px 0;
+                color: #727272;
+                font-size: 18px;
+            }
+        }
+
+        .btn-primary {
+            margin-top: auto;
+        }
     }
 }
